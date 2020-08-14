@@ -3,11 +3,14 @@ name = "corsair-keyb-led"
 version = "0.1.0"
 authors = ["Patrick Strang <patrick@strang.io>"]
 edition = "2018"
-
+exclude = [
+    "**/.gitignore",
+    ".travis.yml"
+]
 
 [dependencies]
+libc = { version = "^0.2", default-features = false }
 cuesdk-sys = { path = "cuesdk-sys", version = "0.1.0" }
 
-[target.'cfg(windows)'.dependencies]
-widestring = "0.4.2"
-winapi = "0.3.9"
+[features]
+use-pkg-config = ["cuesdk-sys/use-pkg-config"]
