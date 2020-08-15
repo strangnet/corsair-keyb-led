@@ -9,8 +9,4 @@ exclude = [
 ]
 
 [dependencies]
-libc = { version = "^0.2", default-features = false }
-cuesdk-sys = { path = "cuesdk-sys", version = "0.1.0" }
-
-[features]
-use-pkg-config = ["cuesdk-sys/use-pkg-config"]
+cuesdk-sys = { path = "cuesdk-sys", version = "^1.0.0" }

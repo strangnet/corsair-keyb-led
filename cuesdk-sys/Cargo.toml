@@ -1,6 +1,6 @@
 [package]
 name = "cuesdk-sys"
-version = "0.1.0"
+version = "1.0.0"
 authors = ["Patrick Strang <patrick@strang.io>"]
 edition = "2018"
 build = "build.rs"
@@ -9,7 +9,6 @@ build = "build.rs"
 name = "cuesdk_sys"
 
 [dependencies]
-libc = { version = "0.2", default-features = false }
 
 [target.'cfg(windows)'.dependencies]
 winapi = "^0.3"
@@ -17,10 +16,5 @@ kernel32-sys = "^0.2"
 
 [build-dependencies]
 bindgen = "0.54"
-pkg-config = "0.3"
 
 [target.'cfg(target_env = "msvc")'.build-dependencies]
-libc = { version = "0.2", default-features = false }
-
-[features]
-use-pkg-config = []

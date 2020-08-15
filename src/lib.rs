@@ -10,10 +10,10 @@ pub enum Error {
 
 impl Driver {
     pub fn init(debug: bool) -> Result<Driver, Error> {
-        // unsafe {
-        //     let hs = sys::CorsairPerformProtocolHandshake();
-        //     println!("{:?}", hs)
-        // }
+        unsafe {
+            let hs = sys::CorsairPerformProtocolHandshake();
+            println!("{:?}", hs)
+        }
 
         if debug {
             return Err(Error::Handshake);
